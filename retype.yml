@@ -1,5 +1,6 @@
 branding:
   title: Apprendre TYPO3
+favicon: static/favicon.png
 search:
   placeholder: Rechercher
 snippets:
