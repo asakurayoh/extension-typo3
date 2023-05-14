@@ -1,9 +1,5 @@
 branding:
   title: Apprendre TYPO3
-links:
-  - text: TYPO3 explained
-    link: https://docs.typo3.org/m/typo3/reference-coreapi/12.4/en-us/
-    target: blank
 search:
   placeholder: Rechercher
 snippets:
