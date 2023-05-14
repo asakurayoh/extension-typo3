@@ -1,1 +1,1 @@
-:::code source="/resources/composer.json" :::
+:::code source="/resources/composer.json" title="composer.json" :::
