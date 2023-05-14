@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.737413799125">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.737413988608">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -28,12 +28,12 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../favicon.png" rel="icon" />
-    <link href="../resources/css/retype.css?v=2.4.0.737413799125" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.737413988608" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.737413799125" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.737413988608" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.737413799125" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../resources/js/prism.js?v=2.4.0.737413799125" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.737413988608" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../resources/js/prism.js?v=2.4.0.737413988608" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -164,152 +164,13 @@
     &quot;description&quot;: &quot;Library management system&quot;,
     &quot;license&quot;: &quot;GPL-2.0-or-later&quot;,
     &quot;type&quot;: &quot;typo3-cms-extension&quot;,
-    &quot;authors&quot;: [
-        {
-            &quot;name&quot;: &quot;Maxime Lafontaine&quot;,
-            &quot;email&quot;: &quot;maxime.lafontaine@gmail.com&quot;,
-            &quot;role&quot;: &quot;developer&quot;
-        }
-    ],
-    &quot;homepage&quot;: &quot;https://github.com/asakurayoh/library-management/&quot;,
-    &quot;support&quot;: {
-        &quot;issues&quot;: &quot;https://github.com/asakurayoh/library-management/issues&quot;,
-        &quot;source&quot;: &quot;https://github.com/asakurayoh/library-management&quot;
-    },
-    &quot;require&quot;: {
-        &quot;php&quot;: &quot;~8.1.0 || ~8.2.0&quot;,
-        &quot;typo3/cms-core&quot;: &quot;^12.4&quot;,
-        &quot;typo3/cms-extbase&quot;: &quot;^12.4&quot;
-    },
-    &quot;require-dev&quot;: {
-        &quot;ergebnis/composer-normalize&quot;: &quot;^2.31&quot;,
-        &quot;friendsofphp/php-cs-fixer&quot;: &quot;^3.16&quot;,
-        &quot;helmich/typo3-typoscript-lint&quot;: &quot;^3.1&quot;,
-        &quot;phpstan/extension-installer&quot;: &quot;^1.3&quot;,
-        &quot;phpstan/phpstan&quot;: &quot;^1.10&quot;,
-        &quot;phpstan/phpstan-phpunit&quot;: &quot;^1.3&quot;,
-        &quot;phpstan/phpstan-strict-rules&quot;: &quot;^1.5&quot;,
-        &quot;phpunit/phpunit&quot;: &quot;^10.1&quot;,
-        &quot;saschaegerer/phpstan-typo3&quot;: &quot;^1.8&quot;,
-        &quot;seld/jsonlint&quot;: &quot;^1.9&quot;,
-        &quot;squizlabs/php_codesniffer&quot;: &quot;^3.7&quot;,
-        &quot;typo3/coding-standards&quot;: &quot;^0.7.1&quot;,
-        &quot;typo3/testing-framework&quot;: &quot;^8.0&quot;
-    },
-    &quot;autoload&quot;: {
-        &quot;psr-4&quot;: {
-            &quot;AsakuraYoh\\LibraryManagement\\&quot;: &quot;Classes/&quot;
-        }
-    },
-    &quot;autoload-dev&quot;: {
-        &quot;psr-4&quot;: {
-            &quot;AsakuraYoh\\LibraryManagement\\Tests\\&quot;: &quot;Tests/&quot;
-        }
-    },
-    &quot;config&quot;: {
-        &quot;allow-plugins&quot;: {
-            &quot;ergebnis/composer-normalize&quot;: true,
-            &quot;typo3/class-alias-loader&quot;: true,
-            &quot;typo3/cms-composer-installers&quot;: true,
-            &quot;phpstan/extension-installer&quot;: true
-        },
-        &quot;bin-dir&quot;: &quot;.Build/bin&quot;,
-        &quot;preferred-install&quot;: {
-            &quot;*&quot;: &quot;dist&quot;
-        },
-        &quot;sort-packages&quot;: true,
-        &quot;vendor-dir&quot;: &quot;.Build/vendor&quot;
-    },
-    &quot;extra&quot;: {
-        &quot;typo3/cms&quot;: {
-            &quot;app-dir&quot;: &quot;.Build&quot;,
-            &quot;extension-key&quot;: &quot;library_management&quot;,
-            &quot;web-dir&quot;: &quot;.Build/Web&quot;
-        }
-    },
-    &quot;scripts&quot;: {
-        &quot;post-autoload-dump&quot;: [
-            &quot;@link-extension&quot;
-        ],
-        &quot;ci&quot;: [
-            &quot;@ci:static&quot;,
-            &quot;@ci:dynamic&quot;
-        ],
-        &quot;ci:composer:normalize&quot;: &quot;@composer normalize --no-check-lock --dry-run&quot;,
-        &quot;ci:composer:psr-verify&quot;: &quot;@composer dumpautoload --optimize --strict-psr&quot;,
-        &quot;ci:dynamic&quot;: [
-            &quot;@ci:tests&quot;
-        ],
-        &quot;ci:json:lint&quot;: &quot;find . ! -path '*.Build/*' ! -path '*node_modules/*' -name '*.json' | xargs -r php .Build/bin/jsonlint -q&quot;,
-        &quot;ci:php&quot;: [
-            &quot;@ci:php:cs-fixer&quot;,
-            &quot;@ci:php:lint&quot;,
-            &quot;@ci:php:sniff&quot;,
-            &quot;@ci:php:stan&quot;
-        ],
-        &quot;ci:php:cs-fixer&quot;: &quot;php-cs-fixer fix --config .php-cs-fixer.php -v --dry-run --using-cache no --diff&quot;,
-        &quot;ci:php:lint&quot;: &quot;find .*.php *.php Classes Configuration Tests -name '*.php' -print0 | xargs -r -0 -n 1 -P 4 php -l&quot;,
-        &quot;ci:php:sniff&quot;: &quot;phpcs Classes Configuration Tests&quot;,
-        &quot;ci:php:stan&quot;: &quot;phpstan --no-progress&quot;,
-        &quot;ci:static&quot;: [
-            &quot;@ci:composer:normalize&quot;,
-            &quot;@ci:json:lint&quot;,
-            &quot;@ci:php:cs-fixer&quot;,
-            &quot;@ci:php:lint&quot;,
-            &quot;@ci:php:sniff&quot;,
-            &quot;@ci:php:stan&quot;,
-            &quot;@ci:ts:lint&quot;,
-            &quot;@ci:yaml:lint&quot;
-        ],
-        &quot;ci:tests&quot;: [
-            &quot;@ci:tests:unit&quot;,
-            &quot;@ci:tests:functional&quot;
-        ],
-        &quot;ci:tests:functional&quot;: &quot;find 'Tests/Functional' -wholename '*Test.php' | parallel --gnu 'echo; echo \&quot;Running functional test suite {}\&quot;; .Build/bin/phpunit --testdox -c .Build/vendor/typo3/testing-framework/Resources/Core/Build/FunctionalTests.xml {}';&quot;,
-        &quot;ci:tests:unit&quot;: &quot;.Build/bin/phpunit -c .Build/vendor/typo3/testing-framework/Resources/Core/Build/UnitTests.xml Tests/Unit --testdox&quot;,
-        &quot;ci:ts:lint&quot;: &quot;typoscript-lint -c Configuration/TsLint.yml --ansi -n --fail-on-warnings -vvv Configuration/TypoScript&quot;,
-        &quot;ci:yaml:lint&quot;: &quot;find . ! -path '*.Build/*' ! -path '*node_modules/*' -regextype egrep -regex '.*.ya?ml$' | xargs -r php ./.Build/bin/yaml-lint&quot;,
-        &quot;docs:generate&quot;: [
-            &quot;docker run --rm t3docs/render-documentation show-shell-commands &gt; tempfile.sh; echo 'dockrun_t3rd makehtml' &gt;&gt; tempfile.sh; bash tempfile.sh; rm tempfile.sh&quot;
-        ],
-        &quot;fix:composer:normalize&quot;: &quot;@composer normalize --no-check-lock&quot;,
-        &quot;fix:php&quot;: [
-            &quot;@fix:php:cs&quot;,
-            &quot;@fix:php:sniff&quot;
-        ],
-        &quot;fix:php:cs&quot;: &quot;php-cs-fixer fix --config .php-cs-fixer.php&quot;,
-        &quot;fix:php:sniff&quot;: &quot;phpcbf Classes Configuration Tests&quot;,
-        &quot;link-extension&quot;: [
-            &quot;@php -r 'is_dir($extFolder=__DIR__.\&quot;/.Build/Web/typo3conf/ext/\&quot;) || mkdir($extFolder, 0777, true);'&quot;,
-            &quot;@php -r 'file_exists($extFolder=__DIR__.\&quot;/.Build/Web/typo3conf/ext/library_management\&quot;) || symlink(__DIR__,$extFolder);'&quot;
-        ],
-        &quot;phpstan:baseline&quot;: &quot;.Build/bin/phpstan --allow-empty-baseline --generate-baseline=phpstan-baseline.neon&quot;
-    },
-    &quot;scripts-descriptions&quot;: {
-        &quot;ci&quot;: &quot;Runs all dynamic and static code checks.&quot;,
-        &quot;ci:composer:normalize&quot;: &quot;Checks the composer.json.&quot;,
-        &quot;ci:composer:psr-verify&quot;: &quot;Verifies PSR-4 namespace correctness.&quot;,
-        &quot;ci:dynamic&quot;: &quot;Runs all PHPUnit tests (unit and functional).&quot;,
-        &quot;ci:json:lint&quot;: &quot;Lints the JSON files.&quot;,
-        &quot;ci:php&quot;: &quot;Runs all static checks for the PHP files.&quot;,
-        &quot;ci:php:cs-fixer&quot;: &quot;Checks the code style with the PHP Coding Standards Fixer (PHP-CS-Fixer).&quot;,
-        &quot;ci:php:lint&quot;: &quot;Lints the PHP files for syntax errors.&quot;,
-        &quot;ci:php:sniff&quot;: &quot;Checks the code style with PHP_CodeSniffer (PHPCS).&quot;,
-        &quot;ci:php:stan&quot;: &quot;Checks the PHP types using PHPStan.&quot;,
-        &quot;ci:static&quot;: &quot;Runs all static code checks (syntax, style, types).&quot;,
-        &quot;ci:tests&quot;: &quot;Runs all PHPUnit tests (unit and functional).&quot;,
-        &quot;ci:tests:functional&quot;: &quot;Runs the functional tests.&quot;,
-        &quot;ci:tests:unit&quot;: &quot;Runs the unit tests.&quot;,
-        &quot;ci:ts:lint&quot;: &quot;Lints the TypoScript files.&quot;,
-        &quot;ci:yaml:lint&quot;: &quot;Lints the YAML files.&quot;,
-        &quot;docs:generate&quot;: &quot;Renders the extension ReST documentation.&quot;,
-        &quot;fix:composer:normalize&quot;: &quot;Normalizes composer.json file content.&quot;,
-        &quot;fix:php&quot;: &quot;Runs all fixers for the PHP code.&quot;,
-        &quot;fix:php:cs&quot;: &quot;Fixes the code style with PHP-CS-Fixer.&quot;,
-        &quot;fix:php:sniff&quot;: &quot;Fixes the code style with PHP_CodeSniffer.&quot;,
-        &quot;phpstan:baseline&quot;: &quot;Updates the PHPStan baseline file to match the code.&quot;,
-        &quot;prepare-release&quot;: &quot;Removes development-only files in preparation of a TER release.&quot;
+&quot;require&quot;: {
+    &quot;php&quot;: &quot;~8.1.0 || ~8.2.0&quot;,
+&quot;extra&quot;: {
+    &quot;typo3/cms&quot;: {
+&quot;extension-key&quot;: &quot;library_management&quot;,
     }
+},
 }</code></pre>
 </doc-codeblock></div>
 
