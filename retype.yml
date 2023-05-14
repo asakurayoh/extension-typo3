@@ -5,4 +5,9 @@ search:
   placeholder: Rechercher
 snippets:
   lineNumbers:
-    - none
+    - js
+    - json
+    - php
+    - html
+    - typoscript
+    - tsconfig
