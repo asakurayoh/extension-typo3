@@ -5,4 +5,4 @@ search:
   placeholder: Rechercher
 snippets:
   lineNumbers:
-    - *
+    - none
