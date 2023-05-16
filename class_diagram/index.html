@@ -9,21 +9,21 @@
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Composer.yml</title>
-    <meta name="title" content="Composer.yml">
+    <title>Class diagram</title>
+    <meta name="title" content="Class diagram">
 
     <!-- Canonical -->
-    <link rel="canonical" href="/composer.yml/" />
+    <link rel="canonical" href="/class_diagram/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/composer.yml/">
-    <meta property="og:title" content="Composer.yml">
+    <meta property="og:url" content="/class_diagram/">
+    <meta property="og:title" content="Class diagram">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/composer.yml/">
-    <meta property="twitter:title" content="Composer.yml">
+    <meta property="twitter:url" content="/class_diagram/">
+    <meta property="twitter:title" content="Class diagram">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.737558198179" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.737558198179" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../resources/js/prism.js?v=2.4.0.737558198179" defer></script>
+    <script id="mermaid-js" type="text/javascript" src="../resources/js/mermaid.js?v=2.4.0" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -151,29 +151,88 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="composeryml" class="break-words">
+<doc-anchor-target id="class-diagram" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#composeryml">#</doc-anchor-trigger>
-        <span>Composer.yml</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#class-diagram">#</doc-anchor-trigger>
+        <span>Class diagram</span>
     </h1>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<div class="codeblock-title">composer.json</div>
-<pre class="language-json"><code v-pre class="language-json">{
-    &quot;name&quot;: &quot;asakurayoh/library-management&quot;,
-    &quot;description&quot;: &quot;Library management system&quot;,
-    &quot;license&quot;: &quot;GPL-2.0-or-later&quot;,
-    &quot;type&quot;: &quot;typo3-cms-extension&quot;,
-    &quot;required&quot;: {
-        &quot;php&quot;: &quot;^8.1&quot;
-    },
-    &quot;extra&quot;: {
-        &quot;typo3/cms&quot;: {
-            &quot;extension-key&quot;: &quot;library_management&quot;
-        }
+<div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre class="mermaid w-full">---
+title: Library Management
+---
+
+classDiagram
+
+    class Media {
+        string title
+        string description
+        FileReference cover
+        string type
+        int type_ref
     }
-}</code></pre>
-</doc-codeblock></div>
+
+    class Book {
+        string isbn
+    }
+
+    class Periodical {
+        string number
+    }
+    
+    class Game {
+        Console console
+    }
+    
+    class Console {
+        string name
+    }
+
+    class Author{
+        string name
+        FileReference photo
+    }
+
+    class Category {
+        string name
+    }
+
+    class Review {
+        string bodytext
+        Book book
+        Author author
+        int status
+    }
+
+    class RejectionReason {
+        Review review
+        string bodytext
+    }
+
+    class Member {
+        string name
+    }
+
+    class List {
+        string name
+        Member member
+    }
+
+    class FileReference {
+
+    }
+
+    Periodical --* Media
+    Book --* Media
+    Game --* Media
+    Media &lt;--&gt; Author : media_author
+    Media &lt;--&gt; Category : media_category
+    Media --&gt; FileReference
+    Media &lt;-- Review
+    Review &lt;-- RejectionReason
+    Review &lt;-- Member
+    Member &lt;-- List
+    Media &lt;--&gt; List : list_media
+    Game --&gt; Console</pre></div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -183,16 +242,23 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../class_diagram/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Class diagram</span>
+                                                <span class="block mt-1">Quel est le but de Apprendre TYPO​3?</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../composer.yml/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Composer.​yml</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -233,6 +299,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Composer.yml", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Class diagram", level: 1, icon: "file", hasPrism: false, hasMermaid: true, hasMath: false }</script>
 </body>
 </html>
