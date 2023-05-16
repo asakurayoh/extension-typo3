@@ -1,10 +1,6 @@
 # Class diagram
 
 ```mermaid
----
-title: Library Management
----
-
 classDiagram
 
     class Media {
