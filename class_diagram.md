@@ -8,18 +8,20 @@ classDiagram
         string description
         FileReference cover
         string type
-        int type_ref
     }
 
     class Book {
         string isbn
+        Media media
     }
 
     class Periodical {
         string number
+        Media media
     }
     
     class Game {
+        Media media
         Console console
     }
     
